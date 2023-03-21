@@ -1,7 +1,6 @@
 class Chatblade < Formula
   include Language::Python::Virtualenv
 
-  depends_on "rust" => :build
 
   desc "A CLI Swiss Army Knife for ChatGPT"
   homepage "https://github.com/npiv/chatblade"
@@ -9,6 +8,7 @@ class Chatblade < Formula
   sha256 "e0090c2cafe700b7ba5e9b4e8d9fa8f7cef2985d658a30a6d94fad2f354e5ee1"
 
   depends_on "python@3.11"
+  depends_on "rust" # for tiktoken
 
   resource "aiohttp" do
     url "https://files.pythonhosted.org/packages/c2/fd/1ff4da09ca29d8933fda3f3514980357e25419ce5e0f689041edb8f17dab/aiohttp-3.8.4.tar.gz"
