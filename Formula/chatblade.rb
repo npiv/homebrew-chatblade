@@ -1,6 +1,8 @@
 class Chatblade < Formula
   include Language::Python::Virtualenv
 
+  depends_on "rust" => :build
+
   desc "A CLI Swiss Army Knife for ChatGPT"
   homepage "https://github.com/npiv/chatblade"
   url "https://files.pythonhosted.org/packages/4a/85/175ee0fbbe05adb7632e5ac535ccb45a6f767d9922ee287b7beb66496d93/chatblade-0.0.1.tar.gz"
