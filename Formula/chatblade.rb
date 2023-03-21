@@ -3,8 +3,8 @@ class Chatblade < Formula
 
   desc "CLI Swiss Army Knife for ChatGPT"
   homepage "https://github.com/npiv/chatblade"
-  url "https://files.pythonhosted.org/packages/4a/85/175ee0fbbe05adb7632e5ac535ccb45a6f767d9922ee287b7beb66496d93/chatblade-0.0.1.tar.gz"
-  sha256 "e0090c2cafe700b7ba5e9b4e8d9fa8f7cef2985d658a30a6d94fad2f354e5ee1"
+  url "https://files.pythonhosted.org/packages/3a/6f/a41492a85ff870ce7f922ce5a93a5c3ab9cc8ff618649ae04e583e58c251/chatblade-0.0.2.tar.gz"
+  sha256 "a880db55045b2cc051ce7c09b290a93f83a6f91f9ab6a7909f27a2a34d7ffc91"
   license "GPL-3.0-only"
 
   depends_on "rust" => :build
@@ -70,6 +70,11 @@ class Chatblade < Formula
     sha256 "5869fdfa34b0ec66c39afa22f4a0fb83a135dff81f6505f52834c6ab3113f762"
   end
 
+  resource "platformdirs" do
+    url "https://files.pythonhosted.org/packages/79/c4/f98a05535344f79699bbd494e56ac9efc986b7a253fe9f4dba7414a7f505/platformdirs-3.1.1.tar.gz"
+    sha256 "024996549ee88ec1a9aa99ff7f8fc819bb59e2c3477b410d90a16d32d6e707aa"
+  end
+
   resource "Pygments" do
     url "https://files.pythonhosted.org/packages/da/6a/c427c06913204e24de28de5300d3f0e809933f376e0b7df95194b2bb3f71/Pygments-2.14.0.tar.gz"
     sha256 "b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"
@@ -120,6 +125,7 @@ class Chatblade < Formula
   end
 
   test do
+    assert_match "nothing to do", shell_output("#{bin}/chatblade")
     assert_match "Query to send to chat GPT", shell_output("#{bin}/chatblade -h")
   end
 end
