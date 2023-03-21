@@ -8,7 +8,6 @@ class Chatblade < Formula
   sha256 "e0090c2cafe700b7ba5e9b4e8d9fa8f7cef2985d658a30a6d94fad2f354e5ee1"
 
   depends_on "python@3.11"
-  depends_on "rust" # for tiktoken
 
   resource "aiohttp" do
     url "https://files.pythonhosted.org/packages/c2/fd/1ff4da09ca29d8933fda3f3514980357e25419ce5e0f689041edb8f17dab/aiohttp-3.8.4.tar.gz"
@@ -93,11 +92,6 @@ class Chatblade < Formula
   resource "rich" do
     url "https://files.pythonhosted.org/packages/5e/0e/ef0a49be56dbc4052a086888cd2490e15fcc95b0eda79e9d0e737b1ab93d/rich-13.3.2.tar.gz"
     sha256 "91954fe80cfb7985727a467ca98a7618e5dd15178cc2da10f553b36a93859001"
-  end
-
-  resource "tiktoken" do
-    url "https://files.pythonhosted.org/packages/91/ed/c6596b42188c03b671ea4d8b6912c1f280ac2991664235039d3a18069d6a/tiktoken-0.3.2.tar.gz"
-    sha256 "a51b5449e883e409cf2f4a846a6a97962d5656a354a5532c330811c833ac3b37"
   end
 
   resource "tqdm" do
