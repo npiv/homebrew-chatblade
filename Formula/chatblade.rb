@@ -3,8 +3,8 @@ class Chatblade < Formula
 
   desc "CLI Swiss Army Knife for ChatGPT"
   homepage "https://github.com/npiv/chatblade"
-  url "https://files.pythonhosted.org/packages/3a/6f/a41492a85ff870ce7f922ce5a93a5c3ab9cc8ff618649ae04e583e58c251/chatblade-0.0.2.tar.gz"
-  sha256 "a880db55045b2cc051ce7c09b290a93f83a6f91f9ab6a7909f27a2a34d7ffc91"
+  url "https://files.pythonhosted.org/packages/08/14/ceb7f7d0d948321361b47d113274eb753ab63a4dc4eecf545a0b463465cc/chatblade-0.2.2.tar.gz"
+  sha256 "680eba7b37d063cddb1210e0ebf646612ab17122cffd52b0d78e6935a75d96e9"
   license "GPL-3.0-only"
 
   depends_on "rust" => :build
